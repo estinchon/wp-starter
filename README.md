@@ -5,7 +5,7 @@ Boilerplate repository for creating WordPress sites.
 👋 shoutout to:
 - [Automattic/component-themes](https://github.com/Automattic/component-themes)
 - [Y7K/scripts](https://github.com/Y7K/scripts)
-- [Y7K/styles](https://github.com/Y7K/styles)
+- [Y7K/style](https://github.com/Y7K/style)
 
 ## Getting started
 1. Make replacements (see next section)
