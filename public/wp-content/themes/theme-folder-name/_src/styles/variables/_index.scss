@@ -1,0 +1,66 @@
+/* ====================================
+   Breakpoints
+======================================= */
+
+$mq-breakpoints: (
+  phablet: 600px,
+  tablet: 900px,
+  desktop: 1100px,
+  wide: 1440px
+);
+
+/* ====================================
+   Colors
+======================================= */
+
+$white: #FFFFFF;
+$black: #000000;
+
+/* body */
+$page-background: $white;
+$text-color: $black;
+
+/* ====================================
+   Typography
+======================================= */
+
+$global-font-size: 16px;
+$global-line-height: 1.6;
+
+$body-font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+$body-font-weight: 400;
+
+// responsive font sizes (initial, phablet, tablet, desktop, wide)
+$font-sizes: (
+  "md": 20px null null 24px null,
+  "lg": 28px null null 64px null
+);
+
+/* ====================================
+   Layout
+======================================= */
+
+// responsive spacings (initial, phablet, tablet, desktop, wide)
+$spacings: (
+  "md": 24px null null 40px null,
+  "lg": 32px null null 64px null,
+  "xl": 80px null null 160px null
+);
+
+$spacings-mapping: (
+  p-t: "padding-top",
+  p-b: "padding-bottom",
+  m-t: "margin-top",
+  m-b: "margin-bottom"
+);
+
+$expose-spacings: true;
+
+/* ====================================
+   Z-Order
+======================================= */
+
+$z-order: (
+  cookie-notice:  90,
+  overlay:        92
+);

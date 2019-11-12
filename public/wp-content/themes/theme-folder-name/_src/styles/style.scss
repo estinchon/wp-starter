@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+// config
+@import "variables/_index";
+
+// vendor (no output)
+@import "~sass-mq";
+
+// utils & mixins
+@import "utils/_index";
+@import "mixins/_index";
+
+// normalize
+@import "~normalize.css";
+
+// global
+@import "global/_index";
+
+// vendor
+// import vendor styles here
+
+// components
+@import "../../components/**/*.scss";

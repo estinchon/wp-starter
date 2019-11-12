@@ -1,0 +1,7 @@
+@function to-em( $value, $base: $global-font-size ) {
+  @return $value/$base*1em;
+}
+
+@function to-rem( $value, $base: $global-font-size ) {
+  @return $value/$base*1rem;
+}

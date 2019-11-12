@@ -1,0 +1,19 @@
+.code-debug {
+  border-radius: 4px;
+  background-color: $black;
+  padding: 20px;
+  color: $white;
+  font-family: monaco, Consolas, "Lucida Console", monospace;
+  font-size: 12px;
+  line-height: 1.6;
+  overflow-x: auto;
+  margin: 24px 0;
+
+  pre {
+    margin: 0;
+  }
+
+  code, pre {
+    font-family: inherit;
+  }
+}

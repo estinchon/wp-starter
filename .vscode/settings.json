@@ -1,0 +1,24 @@
+{
+    "files.exclude": {
+        "public/*.{txt,html}": true,
+        "public/wp-activate.php": true,
+        "public/wp-blog-header.php": true,
+        "public/wp-comments-post.php": true,
+        "public/wp-cron.php": true,
+        "public/wp-links-opml.php": true,
+        "public/wp-load.php": true,
+        "public/wp-login.php": true,
+        "public/wp-mail.php": true,
+        "public/wp-settings.php": true,
+        "public/wp-signup.php": true,
+        "public/wp-trackback.php": true,
+        "public/wp-admin": true,
+        "public/wp-content/languages": true,
+        "public/wp-content/plugins": true,
+        "public/wp-content/themes/twenty*": true,
+        "public/wp-content/upgrade": true,
+        "public/wp-content/uploads": true,
+        "public/wp-includes": true,
+        "public/xmlrpc.php": true,
+    }
+}

@@ -1,0 +1,10 @@
+/* expose spacings */
+@if $expose-spacings {
+  @each $spacing-id, $values in $spacings {
+    @each $mapping, $attr in $spacings-mapping {
+      .s-#{$mapping}-#{$spacing-id} {
+        @include responsive-sp($attr, $spacing-id);
+      }
+    }
+  }
+}

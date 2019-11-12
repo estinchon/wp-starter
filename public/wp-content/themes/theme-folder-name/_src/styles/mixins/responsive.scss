@@ -1,0 +1,35 @@
+@mixin responsive-unit( $attribute: "font-size", $values: null, $breakpoints: $mq-breakpoints ) {
+  @if $values != null {
+    $i: 1;
+    $current-value: nth($values, $i);
+    #{$attribute}: $current-value;
+    #{$attribute}: to-rem($current-value);
+
+    @each $bp-key, $bp-val in $breakpoints {
+      $i: $i + 1;
+      $current-value: nth($values, $i);
+      @if $current-value != null {
+        @include mq( $from: $bp-key ) {
+          #{$attribute}: $current-value;
+          #{$attribute}: to-rem($current-value);
+        }
+      }
+    }
+  }
+}
+
+@mixin responsive-fs($val) {
+  $map: $val;
+  @if type-of($val) != 'list' {
+    $map: map-get($font-sizes, $val);
+  }
+  @include responsive-unit( "font-size", $map );
+}
+
+@mixin responsive-sp($attribute, $val) {
+  $map: $val;
+  @if type-of($val) != 'list' {
+    $map: map-get($spacings, $val);
+  }
+  @include responsive-unit( $attribute, $map );
+}
