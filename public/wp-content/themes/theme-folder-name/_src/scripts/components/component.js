@@ -1,13 +1,25 @@
+/**
+ * Basic component
+ *
+ * Methods available in component:
+ * - init (basics)
+ * - onResize(basics)
+ * - onDebouncedResize (basics)
+ * - onScroll (basics)
+ * - onTransition(data [hook, data]) - Barba.JS events
+ * - beforeDestroy
+ */
+
 export default class Component {
-  constructor(element, props = {}) {
+  constructor(element, props = {}, basics = {}) {
     this.element = element;
     this.props = props;
     this.listeners = [];
 
-    this.init();
+    this.init(basics);
   }
 
-  init() {
+  init(basics = {}) {
     // overwrite in component
   }
 
@@ -22,8 +34,15 @@ export default class Component {
   }
 
   removeAllListeners() {
+    if (!this.listeners.length) return;
+
     this.listeners.forEach(listener => {
       listener.element.removeEventListener(listener.event, listener.handler);
     });
+  }
+
+  destroy() {
+    typeof this.beforeDestroy === "function" && this.beforeDestroy();
+    this.removeAllListeners();
   }
 }

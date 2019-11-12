@@ -1,5 +1,5 @@
 import { general as utilsGeneral } from "../utils";
-import { initComponents } from "../components";
+import { initComponents, setupComponentEvents } from "../components";
 
 function checkDeviceType() {
   const className = utilsGeneral.isTouch() ? "touch-device" : "hover-device";
@@ -23,8 +23,11 @@ function recalculateImageSizes() {
 const boot = () => {
   checkDeviceType();
   setTimeout(recalculateImageSizes, 100);
-  initComponents();
   setVh();
+
+  // init component system
+  initComponents();
+  setupComponentEvents();
 
   if (utilsGeneral.isTouch()) {
     window.addEventListener("orientationchange", e => {

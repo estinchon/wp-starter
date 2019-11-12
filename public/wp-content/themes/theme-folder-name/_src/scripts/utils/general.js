@@ -18,6 +18,46 @@ export function removeClass(el, className) {
     );
 }
 
+export function getScrollPosition() {
+  const supportPageOffset = window.pageXOffset !== undefined;
+  const isCSS1Compat = (document.compatMode || "") === "CSS1Compat";
+
+  const x = supportPageOffset
+    ? window.pageXOffset
+    : isCSS1Compat
+    ? document.documentElement.scrollLeft
+    : document.body.scrollLeft;
+  const y = supportPageOffset
+    ? window.pageYOffset
+    : isCSS1Compat
+    ? document.documentElement.scrollTop
+    : document.body.scrollTop;
+
+  return { x, y };
+}
+
+export function getWindowDimensions() {
+  const width =
+    window.innerWidth ||
+    document.documentElement.clientWidth ||
+    document.body.clientWidth;
+  const height =
+    window.innerHeight ||
+    document.documentElement.clientHeight ||
+    document.body.clientHeight;
+  return { width, height };
+}
+
+export function getBasics() {
+  const win = getWindowDimensions();
+
+  return {
+    scrollY: getScrollPosition().y,
+    width: win.width,
+    height: win.height
+  };
+}
+
 export function isEditing() {
   const data = window.theme_prefix_data;
 

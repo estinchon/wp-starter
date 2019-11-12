@@ -24,6 +24,8 @@ Makes sure to exclude this file (`README.md`).
 - `public/wp-content/themes/theme-folder-name/style.css` → update
 
 ## Plugins
+
+### Plugins: via WP Cli
 ```console
 wp plugin install disable-comments --activate
 ```
