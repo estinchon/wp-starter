@@ -1,6 +1,12 @@
 # ✨ WP Starter
 Boilerplate repository for creating WordPress sites.
 
+## Inspired by
+👋 shoutout to:
+- [Automattic/component-themes](https://github.com/Automattic/component-themes)
+- [Y7K/scripts](https://github.com/Y7K/scripts)
+- [Y7K/styles](https://github.com/Y7K/styles)
+
 ## Getting started
 1. Make replacements (see next section)
 2. Run `yarn install`
@@ -20,7 +26,7 @@ Makes sure to exclude this file (`README.md`).
 
 ### Replacements: Specific files
 - `package.json` → change `name` and `description`
-- `webpack.config.js` → change `setup.url` (default: [https://wp-starter.localhost]())
+- `webpack.config.js` → change `setup.url` (default: [https://wp-starter.localhost](https://wp-starter.localhost))
 - `public/wp-content/themes/theme-folder-name/style.css` → update
 
 ## Plugins
